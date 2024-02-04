@@ -15,22 +15,15 @@
 * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-#ifndef QSP_BINDINGSCONFIG
-	#define QSP_BINDINGSCONFIG
+#include "declarations.h"
 
-	/* Android binding */
-	#ifdef _ANDROID
-		#define QSP_BINDING 
-		#define _ANDROID_BINDING
-		#include "android/android.h"
-	#endif
+#ifndef QSP_TIMEDEFINES
+	#define QSP_TIMEDEFINES
 
-	/* Place your bindings here */
+	extern int qspMSCount;
 
-	#ifndef QSP_BINDING
-		#define QSP_BINDING
-		#define _DEFAULT_BINDING
-		#include "default/qsp_default.h"
-	#endif
+	/* External functions */
+	void qspResetTime(int);
+	int qspGetTime();
 
 #endif
