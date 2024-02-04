@@ -18,6 +18,13 @@
 #ifndef QSP_BINDINGSCONFIG
 	#define QSP_BINDINGSCONFIG
 
+	/* Android binding */
+	#ifdef _ANDROID
+		#define QSP_BINDING 
+		#define _ANDROID_BINDING
+		#include "android/android.h"
+	#endif
+
 	/* Place your bindings here */
 
 	#ifndef QSP_BINDING
